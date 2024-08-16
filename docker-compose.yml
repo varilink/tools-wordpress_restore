@@ -1,0 +1,10 @@
+services:
+
+  wp-restore:
+
+    build: tools/wordpress_restore
+    image: varilink/tools/wordpress_restore
+
+    volumes:
+      - ./group_vars/:/group_vars/:ro
+      - ./host_vars/:/host_vars/:ro
