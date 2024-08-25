@@ -2,7 +2,7 @@
 perl /select-site.pl
 
 # Get the environment variables that the Perl script printed for us
-source /vars.sh
+source vars.sh
 
 # Restore the WordPress files
 bconsole << EOF

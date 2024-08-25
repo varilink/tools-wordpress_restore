@@ -54,7 +54,7 @@ my $fqdn = "${subdomain}.${domain}";
 
 # Output environment variables required for the bconsole commands
 
-open my $fh, '>', '/vars.sh' or die "Can't open > /vars.sh: $1";
+open my $fh, '>', 'vars.sh' or die "Can't open > vars.sh: $!";
 print $fh 'DB=', "$db\n";
 print $fh 'FQDN=', "$fqdn\n";
 print $fh 'HOST=', "$sites{$subdomain}\n";
