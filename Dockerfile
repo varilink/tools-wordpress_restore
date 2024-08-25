@@ -12,6 +12,5 @@ COPY docker-entrypoint.sh /
 COPY select-site.pl /
 COPY bconsole.conf /etc/bacula/
 
-RUN chmod +x /select-site.pl
 
 ENTRYPOINT [ "bash", "/docker-entrypoint.sh" ]
