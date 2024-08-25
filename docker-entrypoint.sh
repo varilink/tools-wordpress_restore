@@ -7,7 +7,7 @@ source vars.sh
 # Restore the WordPress files
 bconsole << EOF
 restore client=$HOST restoreclient=hub select current yes                      \
-  strip_prefix=/var/www add_prefix=/tmp/bacula-restores
+  strip_prefix=/var/www add_prefix=/tmp/bacula-restores/wp-sites
 cd var/www/$FQDN
 mark html/
 done
@@ -20,7 +20,7 @@ read JOBID
 # Restore the latest database backup using the last JOBID for the client
 bconsole << EOF
 restore client=$HOST restoreclient=hub jobid=$JOBID yes                        \
-  strip_prefix=/tmp add_prefix=/tmp/bacula-restores/$FQDN
+  strip_prefix=/tmp add_prefix=/tmp/bacula-restores/wp-sites/$FQDN
 cd tmp/
 mark $DB*
 done
