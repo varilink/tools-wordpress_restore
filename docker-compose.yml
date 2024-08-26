@@ -2,8 +2,9 @@ services:
 
   wp-restore:
 
-    build: tools/wordpress_restore
-    image: varilink/tools/wordpress_restore
+    build: tools/wordpress-restore
+
+    image: varilink/tools/wordpress-restore
 
     volumes:
       - ./group_vars/:/group_vars/:ro
